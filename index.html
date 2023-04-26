@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script
       src="https://kit.fontawesome.com/46810cdd42.js"
       crossorigin="anonymous"
@@ -100,7 +100,7 @@
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
 
-      <div class="swiper-button-pagination"></div>
+      <div class="swiper-pagination"></div>
     </section>
 
     <script>
@@ -122,8 +122,8 @@
         slidesPerView: "auto", // 화면에 보여지는 슬라이더의 갯수, 자동 = 브라우저의 크기에
         // 맞춰서 보여지도록 하는 것
         autoplay: {
-          delay: 1000, // 1초의 딜레이를 가진 뒤 오토시작
-          disableOnInteraction: true, // 오토플레이 중 중간개입시
+          delay: 1700, // 1초의 딜레이를 가진 뒤 오토시작
+          disableOnInteraction: false, // 오토플레이 중 중간개입시
           // 오토플레이의 재시작 여부
         },
         coverflowEffect: {
@@ -138,6 +138,17 @@
           el: ".swiper-pagination",
           type: "fraction", // 타입을 지정
         },
+      });
+
+      let btnStart = document.querySelector(".btnStart");
+      let btnStop = document.querySelector(".btnStop");
+
+      btnStart.addEventListener("click", () => {
+        swiper.autoplay.start();
+      });
+
+      btnStop.addEventListener("click", () => {
+        swiper.autoplay.stopt();
       });
     </script>
   </body>
