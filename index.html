@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/46810cdd42.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- 플러그인 : 라이브러리, 편의기능을 모아둔 것
+    플러그인을 잘 쓰려면 70%정도는 학습하고 써야합니다
+    플러그인을 되도록 적게 사용하는 것이 길게 보았을 때 이득입니다
+    -> 시간을 오히려 js에 투자하는 것이 이득 -->
+    <section class="gallery">
+      <h1>UI/UX <span>PORTFOLIO</span></h1>
+
+      <ul class="auto">
+        <li class="btnStart">
+          <i class="fas fa-play"></i>
+        </li>
+        <li class="btnStop">
+          <i class="fas fa-pause"></i>
+        </li>
+      </ul>
+
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="inner">
+            <div class="con">
+              <img src="img/pic1.png" alt="" />
+              <h2>Lorem ipsum dolor sit.</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum qui
+                animi error.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="inner">
+            <div class="con">
+              <img src="img/pic2.png" alt="" />
+              <h2>Lorem ipsum dolor sit.</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum qui
+                animi error.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="inner">
+            <div class="con">
+              <img src="img/pic3.png" alt="" />
+              <h2>Lorem ipsum dolor sit.</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum qui
+                animi error.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="inner">
+            <div class="con">
+              <img src="img/pic4.png" alt="" />
+              <h2>Lorem ipsum dolor sit.</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum qui
+                animi error.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="inner">
+            <div class="con">
+              <img src="img/pic5.png" alt="" />
+              <h2>Lorem ipsum dolor sit.</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum qui
+                animi error.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <div class="swiper-button-pagination"></div>
+    </section>
+
+    <script>
+      /* 생성자 함수 : 객체지향같이 어떤 틀(주형)을 통해서 새로운 개체를 생성하는
+            함수를 의미합니다 new <-- 생성자함수 */
+      var swiper = new Swiper(".gallery", {
+        navigation: {
+          // 이전, 다음 버튼에 관한 키값
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        loop: true, // 무한루프
+        spaceBetween: 0, // 슬라이더 사이의 공간은 0
+        speed: 1000, //슬라이딩 되는 속도
+        effect: "coverflow", //어떤 이펙트 효과인지 <-- 이 값에 따라서
+        grabCursor: true, //커서의 모양이 손바닥 모양
+        centeredSlides: true, // coverflow효과에서 활성화된 슬라이더의 위치가 정가운데
+        // 배치할지말지의 여부
+        slidesPerView: "auto", // 화면에 보여지는 슬라이더의 갯수, 자동 = 브라우저의 크기에
+        // 맞춰서 보여지도록 하는 것
+        autoplay: {
+          delay: 1000, // 1초의 딜레이를 가진 뒤 오토시작
+          disableOnInteraction: true, // 오토플레이 중 중간개입시
+          // 오토플레이의 재시작 여부
+        },
+        coverflowEffect: {
+          // 위의 effect에 따라서 이 키값이 달라집니다
+          rotate: 50, //슬라이더의 회전각도
+          stretch: -100, // 슬라이더 간의 거리
+          depth: 400, // 깊이효과 ( 슬라이더 회전각도에 따라서 3D 깊이효과 )
+          modifier: 1, // 위의 여러 효과의 배수를 지정합니다
+          slideShadows: false, // 슬라이더의 그림자효과
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction", // 타입을 지정
+        },
+      });
+    </script>
+  </body>
+</html>

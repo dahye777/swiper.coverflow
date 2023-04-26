@@ -1,0 +1,83 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@100&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.gallery {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(45deg, mediumpurple, aqua);
+  position: relative;
+  /* var 함수 : css에서 sass의 mixin을 모방한 함수입니다 */
+}
+.gallery h1 {
+  font: normal 24px/1 "orbitron";
+  color: #fff;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 70px;
+  left: 50px;
+}
+.gallery h1 span {
+  color: #eee;
+}
+.gallery .swiper-wrapper {
+  width: 100%;
+}
+.gallery .auto {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  z-index: 2;
+}
+.gallery .auto li {
+  float: left;
+  margin-right: 20px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+.gallery .swiper-button-next {
+  top: auto;
+  bottom: 50px;
+  right: 60px;
+  filter: grayscale(100%) brightness(3);
+}
+.gallery .swiper-button-prev {
+  top: auto;
+  left: auto;
+  bottom: 50px;
+  right: 100px;
+  filter: grayscale(100%) brightness(3);
+}
+.gallery .swiper-pagination-fraction {
+  bottom: auto;
+  left: auto;
+  top: 50px;
+  right: 50px;
+  width: auto;
+  font-size: 16px;
+  font-family: "orbitron";
+  color: #333;
+  letter-spacing: 1px;
+}
+.gallery .swiper-pagination-fraction span.swiper-pagination-current {
+  font-size: 30px;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */
