@@ -24,6 +24,54 @@
 
   .swiper-wrapper {
     width: 100%;
+    height: 100%;
+
+    .swiper-slide {
+      width: 500px;
+      height: 500px;
+      top: 50%;
+      margin-top: -230px;
+
+      .inner {
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        padding: 30px;
+        // 전체적으로 투명도를 다운시키고, 활성화된 패널만 1을 주겠습니다
+        opacity: 0.4;
+        // transition: 1s;
+
+        .con {
+          position: relative;
+
+          img {
+            width: 100%;
+          }
+
+          h2 {
+            font: normal 40px/1 "roboto";
+            color: #111;
+            margin-top: 15px;
+            margin-bottom: 20px;
+
+            &::after {
+              content: "";
+              display: block;
+              width: 30px;
+              height: 1px;
+              background-color: #888;
+              margin-top: 15px;
+              transition: 1s 0.5s;
+            }
+          }
+          p {
+            font: 13px/1 "arial";
+            color: #aaa;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
   }
 
   .auto {
